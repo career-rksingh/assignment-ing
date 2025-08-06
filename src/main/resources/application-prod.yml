@@ -1,0 +1,14 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:postgresql://prod-db:5432/mortgage
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME:PROD_USER}
+    password: ${DB_PASSWORD:PROD_PASS}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
